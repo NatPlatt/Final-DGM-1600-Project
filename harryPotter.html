@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<link rel="stylesheet" href="portfolio.css">
+    <meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Almendra+SC|EB+Garamond|IM+Fell+English+SC|Metamorphous|Noto+Serif+KR" rel="stylesheet">
+<html>
+<nav>
+  <ul id="navbar">
+    <li>
+        <a href="index.html#welcome-section">About</a></li>
+    <li>
+        <a href="index.html#projects">Projects</a></li>
+    <li>
+        <a href="index.html#contact">Contact</a></li>
+    <li>
+        <a href="index.html">Main</a></li>
+    <li>
+        <a href="cards.html">Pokemon Cards</a></li>
+    <li class="active">
+      <a href="harryPotter.html">Harry Potter Cards</a></li>
+  </ul>
+</nav>
+    <h3>--Harry Potter Cards - coming soon--</h3>
+    <h4>Write muggle, wizard or witch in the input field and click the button.</h4>
+    <div class="muggleFunc">
+        <label>
+            <input id="myInput" type="text">
+            <button onClick="muggleOrNot()">Try it</button>
+        </label>
+    </div>
+    <div>
+        <p id="demo"></p>
+    </div>
+    <figure class="snitch"><img src="/hpPics/harrypottergif.gif" width="505" height="295"alt="Harry Potter with snitch"></figure>
+    <div class="gifs">
+        <figure><img src="/hpPics/jack-o-lantern.gif" alt="Halloween at Hogwarts"></figure>
+        <figure><img src="/hpPics/elderwand.gif" height="205" width="505"alt="Harry with the Elder Wand"></figure>
+        <figure><img src="/hpPics/staircase.gif" width="505" height="205" alt="Hogwarts Staircases"></figure>
+        <figure><img src="/hpPics/hogwarts_in_snow.gif" height="205" width="505"alt="Hogwarts in the snow"></figure>
+        <figure><img src="/hpPics/battle.gif" height="205" width="505"alt="Battle at Hogwarts"></figure>
+        <figure><img src="/hpPics/patronus.gif" height="205" width="505"alt="Snapes Patronus"></figure>
+        <figure><img src="/hpPics/Hogwarts-Christmas-3.gif" height="205" width="505"alt="Hogwarts at Christmas"></figure>
+        <figure><img src="/hpPics/lumos.gif" height="205" width="505"alt="Lumos"></figure>
+        <figure><img src="/hpPics/dumbledoreClap.gif" height="205" width="505"alt="Dumbledore clapping"></figure>
+        <figure><img src="/hpPics/durmstrang.gif" height="205" width="505"alt="Durmstrang fire breather"></figure>
+        <figure><img src="/hpPics/quill.gif" height="205" width="505"alt="Quill writing"></figure>
+        <figure><img src="/hpPics/divinations.gif" alt="Harry and Ron in Divination Class"></figure>
+    </div>
+<!--<script type="module" src="HPcode.js"></script>-->
+</html>
+
+
+<style>
+    h3 {
+        padding-top: 150px;
+        font-family: Courier New;
+        font-size: 25px;
+        text-align: center;
+        padding-left: 25px;
+    }
+    h4 {
+        font-family: Courier New;
+        text-align: center;
+    }
+    div.muggleFunc {
+        position:relative;
+        left: 45%; 
+        margin: 30px;
+    }
+    div.muggleFunc label input#myInput{
+        border-radius: 1rem;
+    }
+    div.muggleFunc label button {
+        border-radius: 1rem;
+        font-family: Courier New;
+        padding: 5px;
+    }
+    p#demo {
+        font-family: 'Metamorphous', cursive;
+        text-align: center;
+        padding-left: 25px;
+    }
+    figure.snitch {
+        padding-left: 36%;
+    }
+    div.gifs {
+        margin: 20px;
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        float: left;
+    }
+    figure {
+        margin:10px;
+        
+    }
+</style>
+
+<script>
+function muggleOrNot() {
+    var text;
+    var types = document.getElementById("myInput").value;
+    
+    switch(types){
+        case "muggle":
+            text="Welcome muggle, enjoy some gifs.";
+        break;
+        case "wizard":
+            text="Welcome fellow wizard.Enjoy some wizard photos.";
+        break;
+        case "witch":
+            text="Welcome fellow witch.Enjoy some wizard photos.";   
+    }
+    document.getElementById("demo").innerHTML = text;
+};
+</script>

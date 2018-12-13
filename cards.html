@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <link rel="stylesheet" href="portfolio.css">
+    <script type='module' src='pokeCode.js'></script>
+    </head>
+    <nav>
+        <ul id="navbar">
+            <li>
+                <a href="index.html#welcome-section">About</a></li>
+            <li>
+                <a href="index.html#projects">Projects</a></li>
+            <li>
+                <a href="index.html#contact">Contact</a></li>
+            <li>
+                <a href="index.html">Main</a></li>
+            <li class="active">
+                <a href="cards.html">Pokemon Cards</a></li>
+            <li>
+                <a href= "harryPotter.html">Harry Potter Cards</a></li>
+        </ul>
+    </nav>
+    
+    <body>
+    <section id="cardTitle">
+        <h3>Pokemon Cards</h3>
+    </section>
+    <div id="container">
+      
+    </div>
+        <button id="createCard" type="button">Click for New Card</button>
+    </body>   
+</html>
+<style>
+nav {
+    position: relative;
+    }
+h3 {
+    font-family: Courier New;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 25px;
+}
+body {
+    display: inline-block;
+    position: relative;
+    }
+section#cardTitle{
+    padding: 10px;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+#container{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    position: sticky;
+    }
+.scene {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #666;
+    margin: 40px 0;
+    perspective: 600px;
+}
+.card {
+    width: 420px;
+    height: 590px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    cursor: pointer;
+    margin: 10px;
+    
+}
+.card.is-flipped {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+.card_face{
+    position: absolute;
+    width: 420px;
+    height: 590px;
+    line-height: 20px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    backface-visibility: hidden;
+    
+}
+figure {
+    border: solid 2px black;
+    margin: 5px;
+    padding-bottom: 5px;
+    box-shadow: 2px 2px 2px #666;
+}
+figcaption {
+    text-align: center;
+    border: solid 2px black;
+    padding: 5px;
+    border-radius: 1rem;
+    margin: 10px;
+}
+
+.backFigCap {
+    width: inherit;
+    border: none;
+    padding-left: 100px;
+    text-align: left;
+    padding-top: 20px;
+    }
+p {
+    padding-left: 30px;
+    padding-top: 25px;
+    text-align: left;
+    }
+.card_face--front{
+    background: white;
+}
+.card_face--back{
+    transform: rotateY(180deg);
+    background-image: url("/pokecardback.png");
+    border: none;
+}
+#createCard{
+    padding: 10px;
+    margin: 20px;
+    }
+</style>

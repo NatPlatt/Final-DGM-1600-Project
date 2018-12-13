@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+    <link rel="stylesheet" href="portfolio.css">
+    <meta charset="UTF-8">
+    
+<!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<nav>
+  <ul id="navbar">
+    <li>
+      <a href="#welcome-section">About</a></li>
+    <li>
+      <a href="#projects">Projects</a></li>
+    <li>
+      <a href="#contact">Contact</a></li>
+    <li class='active'>
+      <a href="index.html">Main</a></li>
+    <li>
+      <a href="cards.html">Pokemon Cards</a></li>
+    <li>
+      <a href="harryPotter.html">Harry Potter Cards</a></li>
+  </ul>
+</nav>
+<section id="welcome-section">
+  <h1>Natalie Zollinger</h1>
+  <p>Web Development Portfolio</p>
+</section>
+<section id="projects">
+  <div class="myproj">
+  <h1>Here are my projects</h1>
+  <p>And other fun web development things</p>
+  <div class="project-tile">
+  
+    <figure class='proj'>
+      <a id="profile-link" href="https://github.com/NatPlatt" target="_blank"><img class="link-logo" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" alt="GitHub"/><figcaption class="sites">GitHub</figcaption>
+      </a>
+    </figure>
+      <figure class='proj'>
+      <a href="http://www.catipsum.com/index.php#.W53RyehKiHs" target="_blank"><img class="link-logo" src="http://www.catipsum.com/imgs/global/logo_catface.svg" alt="Cat Ipsum Generator"/><figcaption class="sites">Cat Ipsum Generator</figcaption>
+      </a>
+    </figure>
+    <figure class='proj'>
+      <a href="https://codepen.io/natplatt/pen/eLMRQO?editors=1100" target="_blank"><img class="link-logo" src="http://nathanschmidtdesign.com/images/small/codepen-logo.svg" alt="Code Pen Logo"/><figcaption class="sites">My CodePen Project</figcaption>
+      </a>
+    </figure>
+  </div>
+  </div>
+</section>
+<section id="API">
+    <figure class="theForce">
+        <img class="starWars" src="/starWarsPics/the%20force%20awakens.png" alt="The Force Awakens, Rey and BB8">
+        <figcaption class="SW">Star Wars API<p id="openingCrawl"></p>
+            <fieldset>
+                <img src="/starWarsPics/explosion2.0.gif" alt="The Force Awakens explosion gif">
+                <img src="/starWarsPics/r2d2.gif" alt="R2D2 gif">
+                <h3>Star Wars Films</h3>
+                <a href="https://www.starwars.com/films" target="_blank"><ul id="film-list"></ul></a>
+            </fieldset>
+        </figcaption>
+    </figure>
+</section>
+<div id="contact">
+  <h1>Let's Work Together</h1>
+  <p>Get in touch with me here:</p>
+  <ul>
+    <li><a href="#" target="_blank" class="contact-list">Email</a>     </li>
+    <li><a href="#" target="_blank" class="contact-list">Facebook</a></li>
+    <li><a href="#" target="_blank" class="contact-list">Twitter</a></li>
+  </ul>
+</div>
+<footer>
+    <p>&copy; &bull; 2018 &bull; This is an almost empty portfolio, it will be filled later</p>
+  </footer>
+    
+<script type="module" src="starwars.js"></script>
+</html>
+
+<style>
+
+section h1 {
+  color: white;
+  font-size: 40px;
+}
+section .myproj h1 {
+  color: black;
+  font-size: 30px;
+}
+h1 {
+  font-family: Courier New;
+  font-size: 25px;
+  text-align: center;
+}
+p {
+  font-family: Courier New;
+  text-align: center;
+  padding: 30px;
+}
+#projects {
+  text-align: center;
+  min-height: 55vh;
+  padding-bottom: 45vh;
+  padding-top: 160px;
+  flex-direction: row;
+}
+.project-tile {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  border: 2px solid;
+  padding-bottom: 10px;
+  padding-top: 15px;
+  justify-content: space-around;
+}
+
+.sites {
+  display: block;
+  caption-side: bottom;
+  justify-content: space-around;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+#film-list li{
+    list-style-type: none;
+    padding-top: 10px;
+    font-family: Courier New;
+}
+.starWars{
+    margin-right: 400px;
+    margin-left: 400px;
+}
+figure.theForce {
+    border: 2px solid black;
+}
+.SW {
+    font-family: Courier New;
+    text-align: center;
+}
+#openingCrawl{
+    border: 2px solid black;
+}
+#film-list {
+    padding-bottom: 10px;
+    
+}
+#film-list li {
+    border: solid grey 2px;
+    border-radius: 1rem;
+    margin: 10px 600px 10px 600px;
+}
+#film-list li:hover {
+    background:#80deea;
+}
+.link-logo {
+  height: 100px;
+}
+legend {
+    font-family: Courier New;
+    text-align: center;
+}
+fieldset {
+    margin-top: 10px;
+    text-align: center;
+}
+#profile-link {
+  display: center;
+  padding: 50px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+#contact {
+  padding: 50px;
+}
+.contact-list {
+  color: black;
+  padding: 60px;
+  padding-top:40px;
+  border: 2px solid;
+  border-radius: 50px;
+  width: 100px;
+  background: #80deea;
+  font-size: 18px;
+}
+.contact-list:hover {
+  background: white;
+}
+div ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+div ul li {
+  display: inline-block;
+}
+footer {
+  background-color: #00838f;
+}
+.project-tile{
+    margin: 40px 0;
+}
+@media only screen and (max-width: 500px){nav ul{text-align: center;
+  }
+nav ul li{
+    margin: 20px;
+  }
+
+</style>
