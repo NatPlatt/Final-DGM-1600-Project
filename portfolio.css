@@ -1,3 +1,4 @@
+/*STYLES APPLIED TO ALL PAGES */
 * {
     margin: 0px;
     padding: 0px;
@@ -9,11 +10,11 @@ nav {
     background-color: #00838f;
     position: fixed;
     width: 100%;
+    z-index: 999;
 }
 #navbar {
     margin: 0px;
 }
-
 nav ul {
     text-align: right;
     display: flex;
@@ -24,7 +25,7 @@ nav ul li {
     padding: 45px;
     font-family: Courier New;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
 }
 nav ul li a {
     color: white;
@@ -40,211 +41,10 @@ a:hover{
     text-align: center;
     width: 100vw;
 }
-/*section h1 {
-  color: white;
-  font-size: 40px;
-}
-section .myproj h1 {
-  color: black;
-  font-size: 30px;
-}
-h1 {
-  font-family: Courier New;
-  font-size: 25px;
-  text-align: center;
-}
-p {
-  font-family: Courier New;
-  text-align: center;
-  padding: 30px;
-}
-#projects {
-  text-align: center;
-  min-height: 55vh;
-  padding-bottom: 45vh;
-  padding-top: 60px;
-  flex-direction: row;
-}
-.project-tile {
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-  border: 2px solid;
-  padding-bottom: 10px;
-  padding-top: 15px;
-  justify-content: space-around;
-}
+/*I decided to put all page-specific styling inline on each individual page.
+It just felt more organized and easier to control and keep track of that way.*/
 
-.sites {
-  display: block;
-  caption-side: bottom;
-  justify-content: space-around;
-  padding: 20px;
-  position: relative;
-  text-align: center;
-}
-#film-list li{
-    list-style-type: none;
-    padding-top: 10px;
-    font-family: Courier New;
-}
-.starWars{
-    margin-right: 400px;
-    margin-left: 400px;
-}
-figure.theForce {
-    border: 2px solid black;
-}
-.SW {
-    font-family: Courier New;
-    text-align: center;
-}
-#openingCrawl{
-    border: 2px solid black;
-}
-#film-list {
-    padding-bottom: 10px;
-    
-}
-#film-list li {
-    border: solid grey 2px;
-    border-radius: 1rem;
-    margin: 10px 600px 10px 600px;
-}
-#film-list li:hover {
-    background:#80deea;
-}
-.link-logo {
-  height: 100px;
-}
-legend {
-    font-family: Courier New;
-    text-align: center;
-}
-fieldset {
-    margin-top: 10px;
-    text-align: center;
-}
-#profile-link {
-  display: center;
-  padding: 50px;
-}
-a {
-  color: black;
-  text-decoration: none;
-}
-#contact {
-  padding: 50px;
-}
-.contact-list {
-  color: black;
-  padding: 60px;
-  padding-top:40px;
-  border: 2px solid;
-  border-radius: 50px;
-  width: 100px;
-  background: #80deea;
-  font-size: 18px;
-}
-.contact-list:hover {
-  background: white;
-}
-div ul {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px;
-}
-div ul li {
-  display: inline-block;
-}
-footer {
-  background-color: #00838f;
-}
-/*@media only screen and (max-width: 500px){nav ul{text-align: center;
-  }
-nav ul li{
-    margin: 20px;
-  }
-.project-tile{
-    margin: 40px 0;
-  }
-/*Pokemon Cards page
-#cardTitle {
-    padding-top: 50vh;
-}
-h3 {
-    padding-top: 200px;
-    padding-left: 25px;
-    color: black;
-}
-#container {
-    display: flex;
-    flex-wrap: wrap;
-    
-}
-figure {
-    border: solid 2px black;
-    display: flex;
-    flex-flow: column;
-    margin: 5px;
-    padding: 5px;
-    box-shadow: 2px 2px 2px #666;
-}
-figcaption {
-    text-align: center;
-    border: solid 2px black;
-    padding: 5px;
-    border-radius: 1rem;
-}
-.backFig {
-    width:inherit;
-    height:inherit;
-}
-.backFigCap {
-    position: absolute;
-    width: 100%;
-    border: none;
-    padding-left: 110px;
-    padding-top: 15px;
-    text-align: left;
-}
-/*CodePen Animation CSS
-.scene {
-    width: 200px;
-    height: 150px;
-    border: 1px solid #666;
-    margin: 40px 0;
-    perspective: 600px;
-}
-.card {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-    
-}
-.card.is-flipped {
-    transform: rotateY(180deg);
-}
-.card_face{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    line-height: 20px;
-    color: black;
-    text-align: center;
-    font-weight: bold;
-    font-size: 30px;
-    backface-visibility: hidden;
-}
-.card_face--front{
-    background: white;
-}
-.card_face--back{
-    transform: rotateY(180deg);
-    background: white;
-}*/
+
+
+
+

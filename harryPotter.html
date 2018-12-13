@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
-<link rel="stylesheet" href="portfolio.css">
+<html> 
+    <link rel="stylesheet" href="portfolio.css">
     <meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css?family=Almendra+SC|EB+Garamond|IM+Fell+English+SC|Metamorphous|Noto+Serif+KR" rel="stylesheet">
-<html>
+    <link href="https://fonts.googleapis.com/css?family=Almendra+SC|EB+Garamond|IM+Fell+English+SC|Metamorphous|Noto+Serif+KR" rel="stylesheet">
+    <script type="module" src="HPcode.js"></script>
 <nav>
   <ul id="navbar">
     <li>
@@ -16,10 +17,24 @@
     <li>
         <a href="cards.html">Pokemon Cards</a></li>
     <li class="active">
-      <a href="harryPotter.html">Harry Potter Cards</a></li>
+      <a href="harryPotter.html">Harry Potter API</a></li>
   </ul>
 </nav>
-    <h3>--Harry Potter Cards - coming soon--</h3>
+<body>
+    
+    <!--All JavaScript code for the Harry Potter API is on HPcode.js, except for the text entry switch statement code which is inline at the bottom-->
+    
+    <h3>Harry Potter API</h3>
+    
+    <figure class="crest"><img src="hpPics/Hogwarts_Crest_Transparent.png" width="100px" height="100px" alt="Hogwarts Crest"></figure>
+    <h4>Characters and Ancestries</h4>
+    
+    <a><ul id="hpFilter"></ul></a>
+    <!--Where the API list items go-->
+    
+    <figure class="sign"><img src="hpPics/deathlyHallows.jpg" height="150" width="150" alt="Deathly Hallows"></figure>
+    <figure class="sign"><img src="hpPics/marauders2.gif" width="400" height="400" alt="Marauders"></figure>
+    
     <h4>Write muggle, wizard or witch in the input field and click the button.</h4>
     <div class="muggleFunc">
         <label>
@@ -44,43 +59,85 @@
         <figure><img src="/hpPics/durmstrang.gif" height="205" width="505"alt="Durmstrang fire breather"></figure>
         <figure><img src="/hpPics/quill.gif" height="205" width="505"alt="Quill writing"></figure>
         <figure><img src="/hpPics/divinations.gif" alt="Harry and Ron in Divination Class"></figure>
+        
+        <figure class="mischief"><img src="hpPics/marauders3.gif" width="500" height="100"alt="Mischief Managed"></figure>
     </div>
-<!--<script type="module" src="HPcode.js"></script>-->
+    
+<footer>
+    <p>&copy; &bull; 2018 &bull; This is a student portfolio.</p>
+</footer>
+
+
+</body>
 </html>
 
-
+<!--Inline CSS Styling-->
 <style>
+   
+    body{
+        
+        background-color: white;
+    }
+    figure.sign {
+        display: flex;
+        justify-content: center;
+    }
+    figure.crest {
+        display: flex;
+        justify-content: center;
+    }
     h3 {
         padding-top: 150px;
         font-family: Courier New;
-        font-size: 25px;
+        font-size: 40px;
         text-align: center;
-        padding-left: 25px;
     }
     h4 {
         font-family: Courier New;
         text-align: center;
+        font-size: 25px;
+    }
+   #hpFilter {
+        padding-bottom: 10px;
+        list-style: none; 
+    }
+    #hpFilter li{
+        border: solid black 2px;
+        border-radius: 1rem;
+        margin: 10px 300px 10px 300px;
+        padding: 5px;
+        text-align: center;
+        font-family: 'Metamorphous',cursive;
+    }
+    #hpFilter li:hover {
+        font-family: Courier New;
+        font-size: 20px;
     }
     div.muggleFunc {
-        position:relative;
-        left: 45%; 
-        margin: 30px;
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        
     }
     div.muggleFunc label input#myInput{
         border-radius: 1rem;
     }
     div.muggleFunc label button {
         border-radius: 1rem;
-        font-family: Courier New;
+        font-family: 'Metamorphous',cursive;
         padding: 5px;
+        font-size: 15px;
     }
     p#demo {
         font-family: 'Metamorphous', cursive;
+        font-size: 25px;
         text-align: center;
         padding-left: 25px;
+        padding-bottom: 500px;
     }
     figure.snitch {
-        padding-left: 36%;
+        display: flex;
+        justify-content: center;
     }
     div.gifs {
         margin: 20px;
@@ -88,27 +145,53 @@
         justify-content: center;
         flex-wrap: wrap;
         float: left;
+        margin-bottom: 60px;
     }
     figure {
         margin:10px;
-        
+    }
+    figure.mischief {
+        margin-top: 70vh;
+        margin-bottom: 30vh;
+    }
+    footer {
+        padding: 15px;
+    }
+    footer p{
+        font-family: Courier New;
+        text-align: center;
     }
 </style>
 
 <script>
+/*Function for the text entry field and try it button*/   
 function muggleOrNot() {
     var text;
     var types = document.getElementById("myInput").value;
-    
+   
     switch(types){
         case "muggle":
-            text="Welcome muggle, enjoy some gifs.";
+            text="Welcome muggle, scroll down to enjoy some gifs from the fictional Harry Potter series.";
+        break;
+        case "Muggle":
+            text="Welcome muggle, scroll down to enjoy some gifs from the fictional Harry Potter series.";
+        break;
+        case "Wizard":
+            text="Welcome fellow wizard. Scroll down to enjoy some photos from our history.";
         break;
         case "wizard":
-            text="Welcome fellow wizard.Enjoy some wizard photos.";
+            text="Welcome fellow wizard.Scroll down to enjoy some photos from our history.";
         break;
         case "witch":
-            text="Welcome fellow witch.Enjoy some wizard photos.";   
+            text="Welcome fellow witch.Scroll down to enjoy some photos from our history.";
+        break;
+        case "Witch":
+            text="Welcome fellow witch. Scroll down to enjoy some photos from our history.";
+        break;
+    /*what happens if the user doesn't type in one of the above options*/
+        default:
+            text="That was not one of the options, you must be a Death Eater! Aurors have been sent to your location."
+        
     }
     document.getElementById("demo").innerHTML = text;
 };

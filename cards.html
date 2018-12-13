@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-    <link rel="stylesheet" href="portfolio.css">
-    <script type='module' src='pokeCode.js'></script>
+        <link rel="stylesheet" href="portfolio.css">
+        <script type='module' src='pokeCode.js'></script>
     </head>
     <nav>
         <ul id="navbar">
@@ -17,46 +17,46 @@
             <li class="active">
                 <a href="cards.html">Pokemon Cards</a></li>
             <li>
-                <a href= "harryPotter.html">Harry Potter Cards</a></li>
+                <a href= "harryPotter.html">Harry Potter Cards</a>
+            </li>
         </ul>
     </nav>
-    
     <body>
-    <section id="cardTitle">
-        <h3>Pokemon Cards</h3>
-    </section>
-    <div id="container">
-      
-    </div>
-        <button id="createCard" type="button">Click for New Card</button>
+        <section id="cardTitle">
+            <h3>Pokemon Cards</h3>
+        </section>
+        
+        <div id="container">
+            <!--Where the Pokemon Cards go-->
+        </div>
+        <button id="createCard" type="button">Click for Two New Cards</button>
+    <footer>
+        <p>&copy; &bull; 2018 &bull; This is a student portfolio.</p>    
+    </footer>
     </body>   
 </html>
-<style>
-nav {
-    position: relative;
-    }
-h3 {
-    font-family: Courier New;
-    font-size: 25px;
-    text-align: left;
-    padding-left: 25px;
-}
-body {
-    display: inline-block;
-    position: relative;
-    }
-section#cardTitle{
-    padding: 10px;
-    margin-bottom: 25px;
-    margin-top: 50px;
-}
 
-#container{
-    display:flex;
-    flex-wrap: wrap;
-    margin: 15px;
-    position: sticky;
-    }
+<!--Inline CSS Styling-->
+<style>
+    
+    h3 {
+        font-family: Courier New;
+        font-size: 25px;
+        text-align: left;
+        padding-left: 25px;
+}
+    section#cardTitle{
+        padding: 10px;
+        margin-bottom: 25px;
+        padding-top: 150px;
+}
+    #container{
+        display:flex;
+        flex-wrap: wrap;
+        margin: 15px;
+        position: relative;
+        z-index: 99;
+}
 .scene {
     width: 200px;
     height: 150px;
@@ -72,7 +72,6 @@ section#cardTitle{
     -webkit-transform-style: preserve-3d;
     cursor: pointer;
     margin: 10px;
-    
 }
 .card.is-flipped {
     transform: rotateY(180deg);
@@ -88,7 +87,6 @@ section#cardTitle{
     font-weight: bold;
     font-size: 30px;
     backface-visibility: hidden;
-    
 }
 figure {
     border: solid 2px black;
@@ -103,14 +101,13 @@ figcaption {
     border-radius: 1rem;
     margin: 10px;
 }
-
 .backFigCap {
     width: inherit;
     border: none;
     padding-left: 100px;
     text-align: left;
     padding-top: 20px;
-    }
+}
 p {
     padding-left: 30px;
     padding-top: 25px;
@@ -127,5 +124,13 @@ p {
 #createCard{
     padding: 10px;
     margin: 20px;
-    }
+}
+footer {
+    background-color: #00838f;
+    font-family: Courier New;
+    padding: 5px;
+}
+    footer p {
+        text-align: center;
+}
 </style>

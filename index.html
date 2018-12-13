@@ -2,16 +2,7 @@
 <html>
     <link rel="stylesheet" href="portfolio.css">
     <meta charset="UTF-8">
-    
-<!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-
-Hello Camper!
-
-For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
-
-- The freeCodeCamp Team 
-
--->
+    <script type="module" src="starwars.js"></script>
 <nav>
   <ul id="navbar">
     <li>
@@ -28,39 +19,44 @@ For now, the test suite only works in Chrome! Please read the README below in th
       <a href="harryPotter.html">Harry Potter Cards</a></li>
   </ul>
 </nav>
+<body>
 <section id="welcome-section">
   <h1>Natalie Zollinger</h1>
   <p>Web Development Portfolio</p>
 </section>
 <section id="projects">
   <div class="myproj">
-  <h1>Here are my projects</h1>
-  <p>And other fun web development things</p>
-  <div class="project-tile">
-  
-    <figure class='proj'>
-      <a id="profile-link" href="https://github.com/NatPlatt" target="_blank"><img class="link-logo" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" alt="GitHub"/><figcaption class="sites">GitHub</figcaption>
-      </a>
-    </figure>
-      <figure class='proj'>
-      <a href="http://www.catipsum.com/index.php#.W53RyehKiHs" target="_blank"><img class="link-logo" src="http://www.catipsum.com/imgs/global/logo_catface.svg" alt="Cat Ipsum Generator"/><figcaption class="sites">Cat Ipsum Generator</figcaption>
-      </a>
-    </figure>
-    <figure class='proj'>
-      <a href="https://codepen.io/natplatt/pen/eLMRQO?editors=1100" target="_blank"><img class="link-logo" src="http://nathanschmidtdesign.com/images/small/codepen-logo.svg" alt="Code Pen Logo"/><figcaption class="sites">My CodePen Project</figcaption>
-      </a>
-    </figure>
-  </div>
+    <h1>Here are my projects</h1>
+    <p>And other fun web development things</p>
+        <div class="project-tile">
+            <figure class='proj'>
+                <a id="profile-link" href="https://github.com/NatPlatt" target="_blank"><img class="link-logo" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" alt="GitHub"/><figcaption class="sites">GitHub</figcaption>
+                </a>
+            </figure>
+            <figure class='proj'>
+                <a href="http://www.catipsum.com/index.php#.W53RyehKiHs" target="_blank"><img class="link-logo" src="http://www.catipsum.com/imgs/global/logo_catface.svg" alt="Cat Ipsum Generator"/><figcaption class="sites">Cat Ipsum Generator</figcaption>
+                </a>
+            </figure>
+            <figure class='proj'>
+                <a href="https://codepen.io/natplatt/pen/eLMRQO?editors=1100" target="_blank"><img class="link-logo" src="http://nathanschmidtdesign.com/images/small/codepen-logo.svg" alt="Code Pen Logo"/><figcaption class="sites">My CodePen Project</figcaption>
+                </a>
+            </figure>
+        </div>
   </div>
 </section>
+    
+<!--All JavaScript code for the Star Wars API section is on starwars.js-->
+    
 <section id="API">
-    <figure class="theForce">
+    <figure>
         <img class="starWars" src="/starWarsPics/the%20force%20awakens.png" alt="The Force Awakens, Rey and BB8">
         <figcaption class="SW">Star Wars API<p id="openingCrawl"></p>
             <fieldset>
+                <!--Some Star Wars gifs for fun-->
                 <img src="/starWarsPics/explosion2.0.gif" alt="The Force Awakens explosion gif">
                 <img src="/starWarsPics/r2d2.gif" alt="R2D2 gif">
                 <h3>Star Wars Films</h3>
+                <!--Decided to link the list of films to the star wars website-->
                 <a href="https://www.starwars.com/films" target="_blank"><ul id="film-list"></ul></a>
             </fieldset>
         </figcaption>
@@ -76,141 +72,139 @@ For now, the test suite only works in Chrome! Please read the README below in th
   </ul>
 </div>
 <footer>
-    <p>&copy; &bull; 2018 &bull; This is an almost empty portfolio, it will be filled later</p>
+    <p>&copy; &bull; 2018 &bull; This is a student portfolio.</p>
   </footer>
     
-<script type="module" src="starwars.js"></script>
+
+</body>
 </html>
 
+<!--Inline CSS styling-->
 <style>
-
-section h1 {
-  color: white;
-  font-size: 40px;
+    section h1 {
+        color: white;
+        font-size: 50px;
 }
-section .myproj h1 {
-  color: black;
-  font-size: 30px;
+    section .myproj h1 {
+        color: black;
+        font-size: 40px;
 }
-h1 {
-  font-family: Courier New;
-  font-size: 25px;
-  text-align: center;
+    h1 {
+        font-family: Courier New;
+        font-size: 25px;
+        text-align: center;
 }
-p {
-  font-family: Courier New;
-  text-align: center;
-  padding: 30px;
+    p {
+        font-family: Courier New;
+        text-align: center;
+        padding: 30px;
+        font-size: 20px;
 }
-#projects {
-  text-align: center;
-  min-height: 55vh;
-  padding-bottom: 45vh;
-  padding-top: 160px;
-  flex-direction: row;
+    #projects {
+        text-align: center;
+        min-height: 55vh;
+        padding-bottom: 45vh;
+        padding-top: 160px;
+        flex-direction: row;
 }
-.project-tile {
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-  border: 2px solid;
-  padding-bottom: 10px;
-  padding-top: 15px;
-  justify-content: space-around;
+    .project-tile {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        border: 2px solid;
+        padding-bottom: 10px;
+        padding-top: 15px;
+        justify-content: space-around;
 }
-
-.sites {
-  display: block;
-  caption-side: bottom;
-  justify-content: space-around;
-  padding: 20px;
-  position: relative;
-  text-align: center;
+    figcaption {
+        font-family: Courier New;
+    }
+    .sites {
+        display: block;
+        caption-side: bottom;
+        justify-content: space-around;
+        padding: 20px;
+        position: relative;
+        text-align: center;
 }
-#film-list li{
-    list-style-type: none;
-    padding-top: 10px;
-    font-family: Courier New;
+    .starWars{
+        display: block;
+        margin: auto;
 }
-.starWars{
-    margin-right: 400px;
-    margin-left: 400px;
+    .SW {
+        font-family: Courier New;
+        text-align: center;
 }
-figure.theForce {
-    border: 2px solid black;
+    #openingCrawl{
+        border: 2px solid black;
+        border-radius: 1rem;
+        margin: 10px 200px 10px 200px;
 }
-.SW {
-    font-family: Courier New;
-    text-align: center;
+    #film-list li{
+        list-style-type: none;
+        padding-top: 10px;
+        font-family: Courier New;
+        padding-bottom: 10px;
+        border: solid grey 2px;
+        border-radius: 1rem;
+        margin: 10px 300px 10px 300px;
 }
-#openingCrawl{
-    border: 2px solid black;
+    #film-list li:hover {
+        background:#80deea;
 }
-#film-list {
-    padding-bottom: 10px;
-    
+    .link-logo {
+        height: 100px;
 }
-#film-list li {
-    border: solid grey 2px;
-    border-radius: 1rem;
-    margin: 10px 600px 10px 600px;
+    legend {
+        font-family: Courier New;
+        text-align: center;
 }
-#film-list li:hover {
-    background:#80deea;
+    fieldset {
+        margin-top: 10px;
+        text-align: center;
 }
-.link-logo {
-  height: 100px;
+    #profile-link {
+        display: center;
+        padding: 50px;
 }
-legend {
-    font-family: Courier New;
-    text-align: center;
+    a {
+        color: black;
+        text-decoration: none;
 }
-fieldset {
-    margin-top: 10px;
-    text-align: center;
+    #contact {
+        padding: 50px;
 }
-#profile-link {
-  display: center;
-  padding: 50px;
+    .contact-list {
+        color: black;
+        padding: 60px;
+        padding-top:40px;
+        border: 2px solid;
+        border-radius: 50px;
+        width: 100px;
+        background: #80deea;
+        font-size: 18px;
 }
-a {
-  color: black;
-  text-decoration: none;
+    .contact-list:hover {
+        background: white;
 }
-#contact {
-  padding: 50px;
+    div ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
 }
-.contact-list {
-  color: black;
-  padding: 60px;
-  padding-top:40px;
-  border: 2px solid;
-  border-radius: 50px;
-  width: 100px;
-  background: #80deea;
-  font-size: 18px;
+    div ul li {
+        display: inline-block;
 }
-.contact-list:hover {
-  background: white;
+    footer {
+        background-color: #00838f;
 }
-div ul {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px;
-}
-div ul li {
-  display: inline-block;
-}
-footer {
-  background-color: #00838f;
-}
-.project-tile{
-    margin: 40px 0;
+    .project-tile{
+        margin: 40px 0;
 }
 @media only screen and (max-width: 500px){nav ul{text-align: center;
   }
-nav ul li{
-    margin: 20px;
+    nav ul li{
+        margin: 20px;
   }
 
 </style>
